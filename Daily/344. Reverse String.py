@@ -1,14 +1,12 @@
 # i need to take O(1) place so i need to modify s
 # reverse the order without creating a new list
 def reverseString(s):
-    left = None
-    right = None
-    for i in range(len(s) // 2):
-        last_index = len(s) - i - 1
-        left = s[i]
-        right = s[last_index]
-        s[last_index] = left
-        s[i] = right
+    m = len(s)
+    for i in range(m // 2):
+        last_index = m - i - 1
+        TMP = s[i]
+        s[i] = s[last_index]
+        s[last_index] = TMP
     return s
 
 
